@@ -3596,12 +3596,17 @@ var StyledMenuItem = styled.a(templateObject_2$f || (templateObject_2$f = __make
 var templateObject_1$p, templateObject_2$f;
 
 var MenuItem$1 = function (_a) {
-    var children = _a.children, href = _a.href, _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.variant, variant = _c === void 0 ? "default" : _c, statusColor = _a.statusColor, props = __rest(_a, ["children", "href", "isActive", "variant", "statusColor"]);
+    var children = _a.children, href = _a.href, _b = _a.externalLink, externalLink = _b === void 0 ? false : _b, _c = _a.isActive, isActive = _c === void 0 ? false : _c, _d = _a.variant, variant = _d === void 0 ? "default" : _d, statusColor = _a.statusColor, props = __rest(_a, ["children", "href", "externalLink", "isActive", "variant", "statusColor"]);
     var itemLinkProps = href
-        ? {
-            as: Link$1,
-            to: href,
-        }
+        ? (externalLink === true)
+            ? {
+                as: 'a',
+                href: href,
+            }
+            : {
+                as: Link$1,
+                to: href,
+            }
         : {
             as: "div",
         };
@@ -5119,12 +5124,12 @@ var MenuItems = function (_a) {
     var _b = _a.items, items = _b === void 0 ? [] : _b, activeItem = _a.activeItem, activeSubItem = _a.activeSubItem, props = __rest(_a, ["items", "activeItem", "activeSubItem"]);
     return (React__default.createElement(Flex, __assign({}, props), items.map(function (_a) {
         var _b, _c;
-        var label = _a.label, _d = _a.items, menuItems = _d === void 0 ? [] : _d, href = _a.href, _e = _a.icon, icon = _e === void 0 ? "" : _e;
+        var label = _a.label, _d = _a.items, menuItems = _d === void 0 ? [] : _d, href = _a.href, externalLink = _a.externalLink, _e = _a.icon, icon = _e === void 0 ? "" : _e;
         var statusColor = (_c = (_b = menuItems === null || menuItems === void 0 ? void 0 : menuItems.find(function (menuItem) { return menuItem.status !== undefined; })) === null || _b === void 0 ? void 0 : _b.status) === null || _c === void 0 ? void 0 : _c.color;
         var isActive = activeItem === href;
         var linkProps = isTouchDevice() && menuItems && menuItems.length > 0 ? {} : { href: href };
         return (React__default.createElement(DropdownMenu, { key: label + "#" + href + "#" + icon, items: menuItems, py: 1, activeItem: activeSubItem },
-            React__default.createElement(MenuItem$1, __assign({}, linkProps, { isActive: isActive, statusColor: statusColor }), label || React__default.createElement(IconComponent, { iconName: icon, color: isActive ? "secondary" : "textSubtle" }))));
+            React__default.createElement(MenuItem$1, __assign({}, linkProps, { externalLink: externalLink, isActive: isActive, statusColor: statusColor }), label || React__default.createElement(IconComponent, { iconName: icon, color: isActive ? "secondary" : "textSubtle" }))));
     })));
 };
 

@@ -6,13 +6,19 @@ import { MenuItemProps } from "./types";
 const MenuItem: React.FC<MenuItemProps> = ({
   children,
   href,
+  externalLink = false,
   isActive = false,
   variant = "default",
   statusColor,
   ...props
 }) => {
   const itemLinkProps: unknown = href
-    ? {
+    ? (externalLink === true)
+      ? {
+        as: 'a',
+        href: href,
+      } 
+    : {
         as: Link,
         to: href,
       }

@@ -4,6 +4,7 @@ import { DropdownMenuItems } from "../DropdownMenu/types";
 export type MenuItemsType = {
   label: string;
   href: string;
+  externalLink?: boolean;
   icon?: string;
   items?: DropdownMenuItems[];
   showOnMobile?: boolean;
