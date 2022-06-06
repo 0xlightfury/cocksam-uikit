@@ -13,7 +13,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   ...props
 }) => {
   const itemLinkProps: unknown = href
-    ? (externalLink === true)
+    ? (!externalLink)
       ? {
         as: "a",
         href: href,
