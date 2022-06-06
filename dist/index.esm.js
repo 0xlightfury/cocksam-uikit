@@ -3601,7 +3601,7 @@ var MenuItem$1 = function (_a) {
         ? externalLink ? {
             as: "a",
             href: href,
-            target: "_blank"
+            target: "blank"
         }
             : {
                 as: Link$1,
@@ -4880,7 +4880,7 @@ var BottomNavItem = function (_a) {
     var bottomNavItemContent = (React__default.createElement(Flex, { flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" },
         iconName && (React__default.createElement(AnimatedIconComponent, { iconName: iconName, height: "22px", width: "21px", color: isActive ? "secondary" : "textSubtle", isActive: isActive, activeBackgroundColor: "backgroundAlt" })),
         React__default.createElement(StyledBottomNavText, { color: isActive ? "text" : "textSubtle", fontWeight: isActive ? "600" : "400", fontSize: "10px" }, label)));
-    return showItemsOnMobile ? (React__default.createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : externalLink ? (React__default.createElement("a", { href: href, target: "_blank" },
+    return showItemsOnMobile ? (React__default.createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : externalLink ? (React__default.createElement("a", { href: href, target: "blank" },
         React__default.createElement(StyledBottomNavItem, __assign({}, props), bottomNavItemContent))) : (React__default.createElement(StyledBottomNavItem, __assign({ as: Link$1, to: href }, props), bottomNavItemContent));
 };
 
