@@ -3634,9 +3634,9 @@ var MenuItem$1 = function (_a) {
     var itemLinkProps = href
         ? (externalLink === true)
             ? {
-                as: 'a',
+                as: "a",
                 href: href,
-                target: 'blank'
+                target: "_blank"
             }
             : {
                 as: reactRouterDom.Link,
