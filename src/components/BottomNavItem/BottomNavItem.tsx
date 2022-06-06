@@ -40,7 +40,7 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
     <StyledBottomNavItem type="button" {...props}>
       {bottomNavItemContent}
     </StyledBottomNavItem>
-  ) : externalLink ? (
+  ) : (externalLink === true) ? (
     <a
       href={href}
       target="_blank"
