@@ -14,7 +14,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", acti
     <>
       {isBottomMenuOpen && <Overlay />}
       <StyledBottomNav justifyContent="space-around" {...props}>
-        {items.map(({ label, items: menuItems, href, icon, showOnMobile = true, showItemsOnMobile = true }, index) => {
+        {items.map(({ label, items: menuItems, href, externalLink, icon, showOnMobile = true, showItemsOnMobile = true }, index) => {
           const statusColor = menuItems?.find((menuItem) => menuItem.status !== undefined)?.status?.color;
           return (
             showOnMobile && (
@@ -31,6 +31,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ items = [], activeItem = "", acti
                   <NotificationDot show={!!statusColor} color={statusColor}>
                     <BottomNavItem
                       href={href}
+                      externalLink={externalLink}
                       isActive={href === activeItem}
                       label={label}
                       iconName={icon}

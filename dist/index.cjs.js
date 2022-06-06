@@ -4911,11 +4911,12 @@ var StyledBottomNavText = styled__default['default'](Text)(templateObject_2$7 ||
 var templateObject_1$c, templateObject_2$7;
 
 var BottomNavItem = function (_a) {
-    var label = _a.label, iconName = _a.iconName, href = _a.href, _b = _a.showItemsOnMobile, showItemsOnMobile = _b === void 0 ? false : _b, _c = _a.isActive, isActive = _c === void 0 ? false : _c, props = __rest(_a, ["label", "iconName", "href", "showItemsOnMobile", "isActive"]);
+    var label = _a.label, iconName = _a.iconName, href = _a.href, _b = _a.externalLink, externalLink = _b === void 0 ? false : _b, _c = _a.showItemsOnMobile, showItemsOnMobile = _c === void 0 ? false : _c, _d = _a.isActive, isActive = _d === void 0 ? false : _d, props = __rest(_a, ["label", "iconName", "href", "externalLink", "showItemsOnMobile", "isActive"]);
     var bottomNavItemContent = (React__default['default'].createElement(Flex, { flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" },
         iconName && (React__default['default'].createElement(AnimatedIconComponent, { iconName: iconName, height: "22px", width: "21px", color: isActive ? "secondary" : "textSubtle", isActive: isActive, activeBackgroundColor: "backgroundAlt" })),
         React__default['default'].createElement(StyledBottomNavText, { color: isActive ? "text" : "textSubtle", fontWeight: isActive ? "600" : "400", fontSize: "10px" }, label)));
-    return showItemsOnMobile ? (React__default['default'].createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : (React__default['default'].createElement(StyledBottomNavItem, __assign({ as: reactRouterDom.Link, to: href }, props), bottomNavItemContent));
+    return showItemsOnMobile ? (React__default['default'].createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : externalLink ? (React__default['default'].createElement("a", { href: href, target: "_blank" },
+        React__default['default'].createElement(StyledBottomNavItem, __assign({}, props), bottomNavItemContent))) : (React__default['default'].createElement(StyledBottomNavItem, __assign({ as: reactRouterDom.Link, to: href }, props), bottomNavItemContent));
 };
 
 var StyledBottomNav = styled__default['default'](Flex)(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  padding: 5px 8px;\n  background: ", ";\n  border-top: 1px solid ", ";\n  padding-bottom: env(safe-area-inset-bottom);\n  html[data-useragent*=\"TokenPocket_iOS\"] & {\n    padding-bottom: 45px;\n  }\n  z-index: 20;\n"], ["\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  padding: 5px 8px;\n  background: ", ";\n  border-top: 1px solid ", ";\n  padding-bottom: env(safe-area-inset-bottom);\n  html[data-useragent*=\"TokenPocket_iOS\"] & {\n    padding-bottom: 45px;\n  }\n  z-index: 20;\n"])), function (_a) {
@@ -5063,12 +5064,12 @@ var BottomNav = function (_a) {
         isBottomMenuOpen && React__default['default'].createElement(Overlay, null),
         React__default['default'].createElement(StyledBottomNav, __assign({ justifyContent: "space-around" }, props), items.map(function (_a, index) {
             var _b, _c;
-            var label = _a.label, menuItems = _a.items, href = _a.href, icon = _a.icon, _d = _a.showOnMobile, showOnMobile = _d === void 0 ? true : _d, _e = _a.showItemsOnMobile, showItemsOnMobile = _e === void 0 ? true : _e;
+            var label = _a.label, menuItems = _a.items, href = _a.href, externalLink = _a.externalLink, icon = _a.icon, _d = _a.showOnMobile, showOnMobile = _d === void 0 ? true : _d, _e = _a.showItemsOnMobile, showItemsOnMobile = _e === void 0 ? true : _e;
             var statusColor = (_c = (_b = menuItems === null || menuItems === void 0 ? void 0 : menuItems.find(function (menuItem) { return menuItem.status !== undefined; })) === null || _b === void 0 ? void 0 : _b.status) === null || _c === void 0 ? void 0 : _c.color;
             return (showOnMobile && (React__default['default'].createElement(DropdownMenu, { key: label, items: menuItems, isBottomNav: true, activeItem: activeSubItem, showItemsOnMobile: showItemsOnMobile, setMenuOpenByIndex: setMenuOpenByIndex, index: index },
                 React__default['default'].createElement(Box, null,
                     React__default['default'].createElement(NotificationDot, { show: !!statusColor, color: statusColor },
-                        React__default['default'].createElement(BottomNavItem, { href: href, isActive: href === activeItem, label: label, iconName: icon, showItemsOnMobile: showItemsOnMobile }))))));
+                        React__default['default'].createElement(BottomNavItem, { href: href, externalLink: externalLink, isActive: href === activeItem, label: label, iconName: icon, showItemsOnMobile: showItemsOnMobile }))))));
         }))));
 };
 
