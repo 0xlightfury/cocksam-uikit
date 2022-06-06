@@ -17,6 +17,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
       ? {
         as: 'a',
         href: href,
+        target: 'blank'
       } 
     : {
         as: Link,

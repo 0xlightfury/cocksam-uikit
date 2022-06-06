@@ -3636,6 +3636,7 @@ var MenuItem$1 = function (_a) {
             ? {
                 as: 'a',
                 href: href,
+                target: 'blank'
             }
             : {
                 as: reactRouterDom.Link,
