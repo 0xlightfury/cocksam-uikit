@@ -3632,16 +3632,16 @@ var templateObject_1$p, templateObject_2$f;
 var MenuItem$1 = function (_a) {
     var children = _a.children, href = _a.href, _b = _a.externalLink, externalLink = _b === void 0 ? false : _b, _c = _a.isActive, isActive = _c === void 0 ? false : _c, _d = _a.variant, variant = _d === void 0 ? "default" : _d, statusColor = _a.statusColor, props = __rest(_a, ["children", "href", "externalLink", "isActive", "variant", "statusColor"]);
     var itemLinkProps = href
-        ? (!externalLink)
+        ? ((externalLink === false)
             ? {
-                as: "a",
-                href: href,
-                target: "_blank"
-            }
-            : {
                 as: reactRouterDom.Link,
                 to: href,
             }
+            : {
+                as: "a",
+                href: href,
+                target: "_blank"
+            })
         : {
             as: "div",
         };
@@ -4915,8 +4915,8 @@ var BottomNavItem = function (_a) {
     var bottomNavItemContent = (React__default['default'].createElement(Flex, { flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" },
         iconName && (React__default['default'].createElement(AnimatedIconComponent, { iconName: iconName, height: "22px", width: "21px", color: isActive ? "secondary" : "textSubtle", isActive: isActive, activeBackgroundColor: "backgroundAlt" })),
         React__default['default'].createElement(StyledBottomNavText, { color: isActive ? "text" : "textSubtle", fontWeight: isActive ? "600" : "400", fontSize: "10px" }, label)));
-    return showItemsOnMobile ? (React__default['default'].createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : (!externalLink) ? (React__default['default'].createElement("a", { href: href, target: "_blank" },
-        React__default['default'].createElement(StyledBottomNavItem, __assign({}, props), bottomNavItemContent))) : (React__default['default'].createElement(StyledBottomNavItem, __assign({ as: reactRouterDom.Link, to: href }, props), bottomNavItemContent));
+    return showItemsOnMobile ? (React__default['default'].createElement(StyledBottomNavItem, __assign({ type: "button" }, props), bottomNavItemContent)) : ((externalLink === false) ? (React__default['default'].createElement(StyledBottomNavItem, __assign({ as: reactRouterDom.Link, to: href }, props), bottomNavItemContent)) : (React__default['default'].createElement("a", { href: href, target: "_blank" },
+        React__default['default'].createElement(StyledBottomNavItem, __assign({}, props), bottomNavItemContent))));
 };
 
 var StyledBottomNav = styled__default['default'](Flex)(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  padding: 5px 8px;\n  background: ", ";\n  border-top: 1px solid ", ";\n  padding-bottom: env(safe-area-inset-bottom);\n  html[data-useragent*=\"TokenPocket_iOS\"] & {\n    padding-bottom: 45px;\n  }\n  z-index: 20;\n"], ["\n  position: fixed;\n  bottom: 0px;\n  width: 100%;\n  padding: 5px 8px;\n  background: ", ";\n  border-top: 1px solid ", ";\n  padding-bottom: env(safe-area-inset-bottom);\n  html[data-useragent*=\"TokenPocket_iOS\"] & {\n    padding-bottom: 45px;\n  }\n  z-index: 20;\n"])), function (_a) {
