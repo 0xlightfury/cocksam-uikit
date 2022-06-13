@@ -76,15 +76,15 @@ export const footerLinks: FooterLinkType[] = [
 ];
 
 export const socials = [
-  // {
-  //   label: "Twitter",
-  //   icon: "Twitter",
-  //   href: "https://twitter.com/#",
-  // },
+  {
+    label: "Twitter",
+    icon: "Twitter",
+    href: "https://twitter.com/coinsamOfficial?s=09",
+  },
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://t.me/cocksam_ann",
+    href: "https://t.me/coinsamOfficial",
   },
   // {
   //   label: "Reddit",
