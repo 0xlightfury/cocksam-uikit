@@ -282,8 +282,8 @@ var IconButton = styled(Button)(templateObject_1$17 || (templateObject_1$17 = __
 var templateObject_1$17;
 
 var Icon$2h = function (props) { return (React__default.createElement(Svg, __assign({ viewBox: "0 0 48 48" }, props),
-    React__default.createElement("path", { d: "M12,30.6c3.2-1.2,7.4-1.9,12-1.9c4.6,0,8.9,0.7,12,1.9c1.6,0.6,3,1.4,4.1,2.4c1.1,1,1.9,2.3,1.9,3.9\n\tc0,3.5-2.7,6.4-6.2,6.7l-0.3,0c-7.7,0.7-15.4,0.7-23.1,0l-0.3,0C8.7,43.2,6,40.3,6,36.8c0-1.6,0.9-2.9,1.9-3.9\n\tC9,32,10.4,31.2,12,30.6z" }),
-    React__default.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M12,30.6c3.2-1.2,7.4-1.9,12-1.9c4.6,0,8.9,0.7,12,1.9c1.6,0.6,3,1.4,4.1,2.4c1.1,1,1.9,2.3,1.9,3.9\n      c0,3.5-2.7,6.4-6.2,6.7l-0.3,0c-7.7,0.7-15.4,0.7-23.1,0l-0.3,0C8.7,43.2,6,40.3,6,36.8c0-1.6,0.9-2.9,1.9-3.9\n      C9,32,10.4,31.2,12,30.6z" }),
+    React__default.createElement("path", { d: "M12,30.6c3.2-1.2,7.4-1.9,12-1.9c4.6,0,8.9,0.7,12,1.9c1.6,0.6,3,1.4,4.1,2.4c1.1,1,1.9,2.3,1.9,3.9\r\n\tc0,3.5-2.7,6.4-6.2,6.7l-0.3,0c-7.7,0.7-15.4,0.7-23.1,0l-0.3,0C8.7,43.2,6,40.3,6,36.8c0-1.6,0.9-2.9,1.9-3.9\r\n\tC9,32,10.4,31.2,12,30.6z" }),
+    React__default.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M12,30.6c3.2-1.2,7.4-1.9,12-1.9c4.6,0,8.9,0.7,12,1.9c1.6,0.6,3,1.4,4.1,2.4c1.1,1,1.9,2.3,1.9,3.9\r\n      c0,3.5-2.7,6.4-6.2,6.7l-0.3,0c-7.7,0.7-15.4,0.7-23.1,0l-0.3,0C8.7,43.2,6,40.3,6,36.8c0-1.6,0.9-2.9,1.9-3.9\r\n      C9,32,10.4,31.2,12,30.6z" }),
     React__default.createElement("ellipse", { cx: "24", cy: "17.1", rx: "12.1", ry: "9.1" }))); };
 
 var Icon$2g = function (props) { return (React__default.createElement(Svg, __assign({ viewBox: "0 0 48 48" }, props),
@@ -1250,7 +1250,7 @@ var Icon$$ = function (props) {
         React__default.createElement("mask", { maskUnits: "userSpaceOnUse", x: "7.5", y: "10.3", width: "33.1", height: "37.2", id: "A_2_" },
             React__default.createElement("path", { fill: "#C4C4C4", d: "M47.4,24C47.4,37,36.9,47.4,24,47.4S0.6,37,0.6,24S11.1,0.7,24,0.7S47.4,11.1,47.4,24z" })),
         React__default.createElement("g", { style: { mask: "url(#A_2_)" } },
-            React__default.createElement("path", { fill: "#BDC2C4", d: "M40.6,44.9c0-5.6-7.4-10.1-16.6-10.1S7.5,39.3,7.5,44.9v2.6h33.1L40.6,44.9L40.6,44.9z M36.3,21.6\n\t\tc0,6.3-5.6,11.4-12.4,11.4s-12.4-5.1-12.4-11.4S17,10.3,23.9,10.3S36.3,15.4,36.3,21.6z" }))));
+            React__default.createElement("path", { fill: "#BDC2C4", d: "M40.6,44.9c0-5.6-7.4-10.1-16.6-10.1S7.5,39.3,7.5,44.9v2.6h33.1L40.6,44.9L40.6,44.9z M36.3,21.6\r\n\t\tc0,6.3-5.6,11.4-12.4,11.4s-12.4-5.1-12.4-11.4S17,10.3,23.9,10.3S36.3,15.4,36.3,21.6z" }))));
 };
 
 var Icon$_ = function (props) {
